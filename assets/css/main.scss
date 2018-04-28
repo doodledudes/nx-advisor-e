@@ -1,0 +1,417 @@
+@import '_admin';
+@import '_override';
+
+html {
+
+}
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Amatic SC', cursive;
+}
+.lead {
+  font-family: 'Amatic SC', cursive;
+}
+
+// =============================================================================[ CUSTOM CSS ]
+
+// =========================================[ NAV ]
+nav {
+  & {
+
+  }
+  &.navbar {
+    & {
+      // background: transparent url(~/assets/images/blackboard.jpg) center top;
+      // background-size: cover;
+      // border-bottom: 5px solid rgba(0,0,0,.1);
+    }
+    &.is-dark {
+      background-color: #2d2d2d;
+    }
+    .navbar-brand {
+      a {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+    .navbar-item {
+      // font-family: 'Amatic SC', cursive;
+      font-size: 1.2rem;
+    }
+    div.navbar-item {
+      @include touch {
+        // background: #00a077;
+      }
+    }
+  }
+}
+
+// =========================================[ SECTION ]
+section {
+  & {
+
+  }
+  &.hero {
+    background-image: url(~/assets/images/img-ideas.png), url(~/assets/images/blackboard.jpg);
+    background-position: bottom right, center center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 60%, cover;
+    @include touch {
+      background-size: 80%, cover;
+      background-position: 200% bottom, center center;
+    }
+    h1 {
+      font-size: 4.5rem;
+    }
+  }
+  &.home-icons {
+    // background: #333;
+    // background: #43464b;
+    background: #333;
+    color: white;
+    a {
+      color: inherit;
+    }
+    .fa-layers {
+      & {
+        transition: transform .1s ease-in-out;
+      }
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+  &.menu-dashboard {
+    // background: #333;
+    // background: #43464b;
+    background: #333;
+    color: white;
+    .fa-layers {
+      & {
+        transition: transform .1s ease-in-out;
+      }
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+  &.growing-business {
+    & {
+      background: #eee url(~/assets/images/man-thinking.png) no-repeat;
+      background-position: 10% bottom;
+      padding-bottom: 120px;
+      padding-top: 120px;
+      @include desktop {
+        background-size: 500px;
+      }
+      @include touch {
+        background-size: 400px;
+        padding-top: 55px;
+        padding-bottom: 55px;
+      }
+      @include mobile {
+        padding-top: 55px;
+        padding-bottom: 55px;
+        background: none;
+      }
+    }
+    .columns {
+      align-items: baseline;
+    }
+    img {
+
+    }
+  }
+  &.approach {
+    & {
+      padding-bottom: 120px;
+      padding-top: 120px;
+      @include desktop {
+
+      }
+      @include touch {
+        padding-top: 55px;
+        padding-bottom: 55px;
+      }
+      @include mobile {
+        padding-top: 55px;
+        padding-bottom: 55px;
+      }
+    }
+    .columns {
+      align-items: center;
+    }
+    .graph {
+      border-radius: 8px;
+    }
+  }
+  &.drilldown {
+    // min-height: 90vh;
+  }
+}
+
+
+// =========================================[ FOOTER ]
+footer {
+  &, a {
+    color: white;
+  }
+}
+
+// =========================================[ LOGIN ]
+section {
+  &.hero {
+    &.login, &.menu-dashboard {
+      background: transparent url(~/assets/images/blackboard.jpg) center center no-repeat;
+      background-size: cover;
+      .title {
+        color: inherit;
+        text-align: center;
+      }
+    }
+  }
+}
+.login-wrap {
+  & {
+    width: 400px;
+    margin: auto;
+  }
+  img.logo {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 200px;
+  }
+  .field {
+    [type='checkbox'], label, span {
+      vertical-align: middle;
+    }
+    [type='checkbox'] {
+      margin-right: 10px;
+    }
+    &.is-grouped {
+      justify-content: center;
+    }
+  }
+}
+
+// =========================================[ WHY IT WORKS ]
+section {
+  & {
+
+  }
+  h2.title {
+    color: white;
+  }
+  .number {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: 0;
+    strong {
+      color: white;
+    }
+    &.start {
+      background: $success;
+    }
+    &.intervention {
+      background: #ff715b;
+    }
+    &.end {
+      background: $primary;
+    }
+  }
+  // DEVELOP WISDOM
+  &.develop {
+    background: #333;
+    color: white;
+    .columns {
+      .column {
+        & {
+          position: relative;
+          text-align: center;
+        }
+        h3 {
+          position: relative;
+          z-index: 2;
+        }
+        .list {
+          line-height: 35px;
+        }
+        @include tablet {
+          &::before {
+            content: '';
+            display: block;
+
+            width: 100%;
+            height: 2px;
+            background: white;
+
+            position: absolute;
+            top: 35px;
+            left: 0;
+            z-index: 1;
+          }
+          &:first-child {
+            &::before {
+              width: 50%;
+              right: 0;
+              left: auto;
+            }
+          }
+          &:last-child {
+            &::before {
+              width: 50%;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  // COACHES
+  &.coaches {
+    & {
+      background: #eee;
+    }
+    h1 {
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+    .coach-photo {
+      img {
+        border-radius: 50%;
+        margin: 0 auto 20px auto;
+        display: block;
+        width: 150px;
+      }
+    }
+    .coach-info {
+      text-align: center;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .columns {
+      align-items: center;
+      // background: #ffffff66;
+    }
+    .social {
+      & {
+
+      }
+      a {
+        display: inline-block;
+        margin: 0 5px;
+        vertical-align: bottom;
+      }
+    }
+  }
+  // GROWTH FUNDAMENTALS
+  &.growth-fundamentals {
+    .columns {
+      align-items: center;
+    }
+    background: url(~/assets/images/blackboard.jpg) center center no-repeat;
+    background-size: cover;
+    color: white;
+    h3 {
+      color: white;
+    }
+  }
+  // PRICING
+  &.pricing {
+    background: #eee;
+    .columns {
+      flex-flow: wrap;
+      display: flex;
+    }
+    .price {
+      & {
+        background: white;
+        border-radius: 3px;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+      }
+      &.option-1 {
+        .heading {
+          background: lighten($grey, 15%);
+          h1, p {
+            color: white;
+          }
+        }
+      }
+      &.option-2 {
+        .heading {
+          background: $info;
+          h1, p {
+            color: white;
+          }
+        }
+      }
+      &.option-3 {
+        .heading {
+          background: $success;
+          h1, p {
+            color: white;
+          }
+        }
+      }
+      &.option-4 {
+        .heading {
+          background: $primary;
+          h1, p {
+            color: white;
+          }
+        }
+      }
+      .heading {
+        padding: 15px;
+        min-height: 165px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+      }
+      .cost {
+        padding: 15px;
+        font-size: 2.5rem;
+      }
+      .btn {
+        padding: 15px;
+      }
+      .note {
+        padding: 15px;
+        border-top: 1px solid #eee;
+        min-height: 100px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content {
+        padding: 25px 15px;
+        margin-bottom: 0;
+        flex-grow: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+
+// =========================================[ MODAL ]
+.dialog {
+  .modal-card-body {
+    font-size: 1.2rem;
+  }
+  .modal-card-foot {
+    justify-content: flex-end;
+  }
+}
