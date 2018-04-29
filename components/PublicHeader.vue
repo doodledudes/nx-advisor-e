@@ -5,13 +5,13 @@
         a.navbar-item(href="/")
           img(src="@/assets/images/logo.png", alt="Advisor-e.com")
         //- a
-        .navbar-burger.burger(data-target="navbarExampleTransparentExample")
+        .navbar-burger.burger(data-target="navbarExampleTransparentExample", @click="toggleNavbar($event)", v-bind:class="{'is-active': isActive}")
           span
           span
           span
         //- navbar-burger
       //- navbar-brand
-      #navbarExampleTransparentExample.navbar-menu
+      #navbarExampleTransparentExample.navbar-menu(v-bind:class="{'is-active': isActive}")
         .navbar-start
           a.navbar-item(href="/why-it-works") Why It Works
           a.navbar-item(href="/pricing") Pricing
@@ -37,6 +37,21 @@
     //- container
   //- nav
 </template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      isActive: false
+    }
+  },
+  methods: {
+    toggleNavbar() {
+      this.isActive = !this.isActive
+    },
+  }
+}
+</script>
 
 <style>
 
