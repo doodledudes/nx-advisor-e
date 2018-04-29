@@ -5,7 +5,7 @@
         a.navbar-item(href="/")
           img(src="@/assets/images/logo.png", alt="Advisor-e.com")
         //- a
-        .navbar-burger.burger(data-target="navbarExampleTransparentExample", @click="toggleNavbar($event)", v-bind:class="{'is-active': isActive}")
+        .navbar-burger.burger(data-target="navbarExampleTransparentExample", @click="toggleNavbar()", v-bind:class="{'is-active': isActive}")
           span
           span
           span
