@@ -1,17 +1,22 @@
 <template lang="pug">
   div
-    Header
+    public-header
     <nuxt/>
-    Footer
+    public-footer
 </template>
 <script>
 import Header from '~/components/PublicHeader.vue'
 import Footer from '~/components/PublicFooter.vue'
 
 export default {
+  head: {
+    htmlAttrs: {
+      class: 'has-navbar-fixed-top'
+    }
+  },
   components: {
-    Header,
-    Footer
+    'public-header': Header,
+    'public-footer': Footer
   }
 }
 </script>

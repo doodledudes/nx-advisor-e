@@ -37,7 +37,7 @@
         .columns
           .column.has-text-centered
             no-ssr(placeholder='Loading Icon...')
-              a(href='dashboard-get-organised.html')
+              a(href='/dashboard-get-organised')
                 span.fa-9x
                   span.fa-layers.fa-fw
                     i.fas.fa-circle
@@ -53,7 +53,7 @@
           //- column
           .column.has-text-centered
             no-ssr(placeholder='Loading Icon...')
-              a(href='dashboard-get-the-job.html')
+              a(href='/dashboard-get-the-job')
                 span.fa-9x
                   span.fa-layers.fa-fw
                     i.fas.fa-circle
@@ -69,7 +69,7 @@
           //- column
           .column.has-text-centered
             no-ssr(placeholder='Loading Icon...')
-              a(href='dashboard-do-the-job.html')
+              a(href='/dashboard-do-the-job')
                 span.fa-9x
                   span.fa-layers.fa-fw
                     i.fas.fa-circle

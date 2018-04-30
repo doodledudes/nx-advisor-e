@@ -3,9 +3,6 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    htmlAttrs: {
-      class: 'has-navbar-fixed-top'
-    },
     title: 'nx-advisor-e',
     meta: [
       { charset: 'utf-8' },
