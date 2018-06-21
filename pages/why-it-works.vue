@@ -15,7 +15,7 @@
             p.is-size-3.has-text-warning 5 Layers of Complexity
             p.is-size-5 Identify Dominant Psyche Error
             br
-            p.is-size-3.has-text-success 7 Areas of Growth Tactics
+            p.is-size-3.has-text-success 7 Growth Tactics
             p.is-size-5 Identify Next Tactical Focus
             br
             p.is-size-3.has-text-info 9 Growth Aspects
